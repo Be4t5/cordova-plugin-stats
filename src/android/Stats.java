@@ -25,8 +25,7 @@ public class Stats extends CordovaPlugin {
 		
 		if (action.equals("consentElephant")) {
 
-            Context context=this.cordova.getActivity().getApplicationContext();
-			ElephantLib.grantConsent(context);
+			ElephantLib.grantConsent(this.cordova.getActivity().getApplicationContext());
 			
             callbackContext.success("ok");
 
@@ -40,8 +39,7 @@ public class Stats extends CordovaPlugin {
 		
 		if (action.equals("revokeElephant")) {
 
-            Context context=this.cordova.getActivity().getApplicationContext();
-			ElephantLib.revokeConsent(context);
+			ElephantLib.revokeConsent(this.cordova.getActivity().getApplicationContext());
 			
             callbackContext.success("ok");
 
