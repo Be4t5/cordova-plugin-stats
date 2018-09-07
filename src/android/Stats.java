@@ -12,7 +12,7 @@ public class Stats extends CordovaPlugin {
 
         if (action.equals("initElephant")) {
 
-            ElephantLib.init(this, "PK28KR6MQP559PVN5L53HDGA");
+            ElephantLib.init(this.cordova.getActivity(), "PK28KR6MQP559PVN5L53HDGA");
             callbackContext.success("ok");
 
             return true;
