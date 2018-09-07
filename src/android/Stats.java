@@ -17,13 +17,7 @@ public class Stats extends CordovaPlugin {
 
             return true;
 
-        } else {
-            
-            return false;
-
-        }
-		
-		if (action.equals("consentElephant")) {
+        } else if (action.equals("consentElephant")) {
 
 			ElephantLib.grantConsent(this.cordova.getActivity().getApplicationContext());
 			
@@ -31,13 +25,7 @@ public class Stats extends CordovaPlugin {
 
             return true;
 
-        } else {
-            
-            return false;
-
-        }
-		
-		if (action.equals("revokeElephant")) {
+        }else if (action.equals("revokeElephant")) {
 
 			ElephantLib.revokeConsent(this.cordova.getActivity().getApplicationContext());
 			
