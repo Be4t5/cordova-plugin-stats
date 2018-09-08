@@ -6,7 +6,7 @@
   <name>Stats</name>
 
   <engines>
-    <engine name="cordova" version=">=5.4.0"/>
+    <engine name="cordova" version=">=3.4.0"/>
   </engines>
 
   <asset src="www/stats.js" target="js/stats.js"/>
