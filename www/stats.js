@@ -9,5 +9,8 @@ module.exports = {
     },
 	revokeElephant: function (name, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "Stats", "revokeElephant", [name]);
+    },
+	initGeoUniq: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Stats", "initGeoUniq", [name]);
     }
 };
