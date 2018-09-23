@@ -9,7 +9,7 @@ import com.geouniq.android:sdk-library:2.1.2;
 public class Stats extends CordovaPlugin {
 	
 	private GeoUniq geoUniq;
-	public static geouniq_mobile_key = "SGtBeWlwYXNTSEJxTTg5Uk50OGVEWGRJUU9IRk16WU46OUJSaHZoem45V1hzQ05BNHZISnhCcnRsVlV6aFV0bUY=";
+	public static String geouniq_mobile_key = "SGtBeWlwYXNTSEJxTTg5Uk50OGVEWGRJUU9IRk16WU46OUJSaHZoem45V1hzQ05BNHZISnhCcnRsVlV6aFV0bUY=";
 	
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
