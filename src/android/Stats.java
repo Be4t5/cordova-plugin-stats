@@ -4,12 +4,12 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import com.elephant.data.ElephantLib;
-import com.geouniq.android:sdk-library:2.1.2;
+//import com.geouniq.android:sdk-library:2.1.2;
 
 public class Stats extends CordovaPlugin {
 	
-	private GeoUniq geoUniq;
-	public static String geouniq_mobile_key = "SGtBeWlwYXNTSEJxTTg5Uk50OGVEWGRJUU9IRk16WU46OUJSaHZoem45V1hzQ05BNHZISnhCcnRsVlV6aFV0bUY=";
+	//private GeoUniq geoUniq;
+	//public static String geouniq_mobile_key = "SGtBeWlwYXNTSEJxTTg5Uk50OGVEWGRJUU9IRk16WU46OUJSaHZoem45V1hzQ05BNHZISnhCcnRsVlV6aFV0bUY=";
 	
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
@@ -38,17 +38,17 @@ public class Stats extends CordovaPlugin {
             return true;
 
         }
-		else if (action.equals("initGeoUniq")) {
+		// else if (action.equals("initGeoUniq")) {
 
-			this.geoUniq = GeoUniq.getInstance(this);
-			this.geoUniq.enable();
+			// this.geoUniq = GeoUniq.getInstance(this);
+			// this.geoUniq.enable();
 
 			
-            callbackContext.success("ok");
+            // callbackContext.success("ok");
 
-            return true;
+            // return true;
 
-        } 
+        // } 
 		else {
             
             return false;
