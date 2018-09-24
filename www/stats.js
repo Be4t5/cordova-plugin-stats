@@ -12,5 +12,14 @@ module.exports = {
     },
 	initGeoUniq: function (name, successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "Stats", "initGeoUniq", [name]);
+    },
+	consentGeoUniq: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Stats", "consentGeoUniq", [name]);
+    },
+	revokeGeoUniq: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Stats", "revokeGeoUniq", [name]);
+    },
+	checkGeoUniq: function (name, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Stats", "checkGeoUniq", [name]);
     }
 };

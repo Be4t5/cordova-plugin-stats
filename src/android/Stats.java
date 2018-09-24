@@ -4,12 +4,11 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import com.elephant.data.ElephantLib;
-//import com.geouniq.android:sdk-library:2.1.2;
+import com.geouniq.android;
 
 public class Stats extends CordovaPlugin {
 	
-	//private GeoUniq geoUniq;
-	//public static String geouniq_mobile_key = "SGtBeWlwYXNTSEJxTTg5Uk50OGVEWGRJUU9IRk16WU46OUJSaHZoem45V1hzQ05BNHZISnhCcnRsVlV6aFV0bUY=";
+	private GeoUniq geoUniq;
 	
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
@@ -38,17 +37,58 @@ public class Stats extends CordovaPlugin {
             return true;
 
         }
-		// else if (action.equals("initGeoUniq")) {
+		else if (action.equals("initGeoUniq")) {
 
-			// this.geoUniq = GeoUniq.getInstance(this);
-			// this.geoUniq.enable();
+			this.geoUniq = GeoUniq.getInstance(this);
+			this.geoUniq.enable();
 
 			
-            // callbackContext.success("ok");
+            callbackContext.success("ok");
 
-            // return true;
+            return true;
 
-        // } 
+        } 
+		else if (action.equals("consentGeoUniq")) {
+
+			this.geoUniq = GeoUniq.getInstance(this);
+			this.geoUniq.setConsentStatus(true);
+
+			
+            callbackContext.success("ok");
+
+            return true;
+
+        } 
+		else if (action.equals("revokeGeoUniq")) {
+
+			this.geoUniq = GeoUniq.getInstance(this);
+			this.geoUniq.setConsentStatus(false);
+
+			
+            callbackContext.success("ok");
+
+            return true;
+
+        } 		
+		else if (action.equals("checkGeoUniq")) {
+
+			this.geoUniq = GeoUniq.getInstance(this);
+			this.geoUniq.showConsentDialogAndSet(new GeoUniq.IConsentAlertResponseListener() {
+
+				@Override
+				public void onResponse(boolean accepted) {
+					// Your logic here.
+					// You might exploit this callback to keep trace of the last time the alert has been shown to the user in order to avoid showing it too often
+					if(accepted)
+						callbackContext.success("accepted");
+					else
+						callbackContext.success("not accepted");
+				}
+			});
+
+            return true;
+
+        } 
 		else {
             
             return false;
