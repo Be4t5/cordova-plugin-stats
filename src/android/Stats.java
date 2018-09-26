@@ -70,8 +70,7 @@ public class Stats extends CordovaPlugin {
 
             return true;
 
-        } 
-/*		
+        } 		
 		else if (action.equals("checkGeoUniq")) {
 
 			geoUniq = GeoUniq.getInstance(this.cordova.getActivity());
@@ -90,7 +89,7 @@ public class Stats extends CordovaPlugin {
 
             return true;
 
-        } */
+        } 
 		else {
             
             return false;
