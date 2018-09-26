@@ -66,27 +66,17 @@ public class Stats extends CordovaPlugin {
             return true;
 
         } 
-/*		
+	
 		else if (action.equals("checkGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this.cordova.getActivity());
-			geoUniq.showConsentDialogAndSet(new GeoUniq.IConsentAlertResponseListener() {
-
-				@Override
-				public void onResponse(boolean accepted) {
-					// Your logic here.
-					// You might exploit this callback to keep trace of the last time the alert has been shown to the user in order to avoid showing it too often
-					if(accepted)
+			
 						callbackContext.success("accepted");
-					else
-						callbackContext.success("not accepted");
-				}
-			});
+					
 
             return true;
 
         } 
-		*/
+		
 		else {
             
             return false;
