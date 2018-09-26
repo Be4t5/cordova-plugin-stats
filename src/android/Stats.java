@@ -44,7 +44,7 @@ public class Stats extends CordovaPlugin {
 				GeoUniq.getInstance(this.cordova.getActivity()).enable();
 			}
 			catch (Exception exc) {
-			  callbackContext.success(exc);
+			  callbackContext.success(exc.toString());
 			}
 			
             callbackContext.success("ok");
@@ -58,7 +58,7 @@ public class Stats extends CordovaPlugin {
 				GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(true);
 			}
 			catch (Exception exc) {
-			  callbackContext.success(exc);
+			  callbackContext.success(exc.toString());
 			}
 			
 
