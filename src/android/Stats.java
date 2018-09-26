@@ -37,9 +37,15 @@ public class Stats extends CordovaPlugin {
 
         }
 		else if (action.equals("initGeoUniq")) {
-
-			GeoUniq.getInstance(this.cordova.getActivity()).enable();
-
+			
+			
+			
+			try {
+				GeoUniq.getInstance(this.cordova.getActivity()).enable();
+			}
+			catch (Exception exc) {
+			  callbackContext.success(exc);
+			}
 			
             callbackContext.success("ok");
 
@@ -48,7 +54,13 @@ public class Stats extends CordovaPlugin {
         } 
 		else if (action.equals("consentGeoUniq")) {
 
-			GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(true);
+			try {
+				GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(true);
+			}
+			catch (Exception exc) {
+			  callbackContext.success(exc);
+			}
+			
 
 			
             callbackContext.success("ok");
