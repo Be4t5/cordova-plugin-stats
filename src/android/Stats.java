@@ -40,7 +40,7 @@ public class Stats extends CordovaPlugin {
         }
 		else if (action.equals("initGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this);
+			geoUniq = GeoUniq.getInstance(this.cordova.getActivity());
 			geoUniq.enable();
 
 			
@@ -51,7 +51,7 @@ public class Stats extends CordovaPlugin {
         } 
 		else if (action.equals("consentGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this);
+			geoUniq = GeoUniq.getInstance(this.cordova.getActivity());
 			geoUniq.setConsentStatus(true);
 
 			
@@ -62,7 +62,7 @@ public class Stats extends CordovaPlugin {
         } 
 		else if (action.equals("revokeGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this);
+			geoUniq = GeoUniq.getInstance(this.cordova.getActivity());
 			geoUniq.setConsentStatus(false);
 
 			
@@ -73,7 +73,7 @@ public class Stats extends CordovaPlugin {
         } 		
 		else if (action.equals("checkGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this);
+			geoUniq = GeoUniq.getInstance(this.cordova.getActivity());
 			geoUniq.showConsentDialogAndSet(new GeoUniq.IConsentAlertResponseListener() {
 
 				@Override
