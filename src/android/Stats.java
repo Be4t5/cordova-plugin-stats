@@ -38,7 +38,7 @@ public class Stats extends CordovaPlugin {
         }
 		else if (action.equals("initGeoUniq")) {
 
-			GeoUniq.getInstance(this.cordova.getActivity())enable();
+			GeoUniq.getInstance(this.cordova.getActivity()).enable();
 
 			
             callbackContext.success("ok");
