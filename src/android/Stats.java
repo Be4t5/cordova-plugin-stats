@@ -8,9 +8,7 @@ import com.elephant.data.ElephantLib;
 
 
 public class Stats extends CordovaPlugin {
-	
-	private GeoUniq geoUniq;
-	
+		
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
@@ -40,8 +38,7 @@ public class Stats extends CordovaPlugin {
         }
 		else if (action.equals("initGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this.cordova.getActivity().getApplicationContext());
-			geoUniq.enable();
+			GeoUniq.getInstance(this.cordova.getActivity())enable();
 
 			
             callbackContext.success("ok");
@@ -51,8 +48,7 @@ public class Stats extends CordovaPlugin {
         } 
 		else if (action.equals("consentGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this.cordova.getActivity().getApplicationContext());
-			geoUniq.setConsentStatus(true);
+			GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(true);
 
 			
             callbackContext.success("ok");
@@ -62,8 +58,7 @@ public class Stats extends CordovaPlugin {
         } 
 		else if (action.equals("revokeGeoUniq")) {
 
-			geoUniq = GeoUniq.getInstance(this.cordova.getActivity().getApplicationContext());
-			geoUniq.setConsentStatus(false);
+			GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(false);
 
 			
             callbackContext.success("ok");
