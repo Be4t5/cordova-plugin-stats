@@ -3,7 +3,7 @@ package com.stats;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
-import com.geouniq.android.GeoUniq;
+import com.geouniq.android.*;
 import com.elephant.data.ElephantLib;
 
 
