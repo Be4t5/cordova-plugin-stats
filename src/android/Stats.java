@@ -3,8 +3,8 @@ package com.stats;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
-import com.geouniq.android.*;
-import com.google.*;
+//import com.geouniq.android.*;
+
 import com.elephant.data.ElephantLib;
 
 
@@ -37,52 +37,52 @@ public class Stats extends CordovaPlugin {
             return true;
 
         }
-		else if (action.equals("initGeoUniq")) {
+		// else if (action.equals("initGeoUniq")) {
 			
 			
 			
 
-			GeoUniq.getInstance(this.cordova.getActivity()).enable();
+			// GeoUniq.getInstance(this.cordova.getActivity()).enable();
 
 			
-            callbackContext.success("ok");
+            // callbackContext.success("ok");
 
-            return true;
+            // return true;
 
-        } 
-		else if (action.equals("consentGeoUniq")) {
-
-			
-				GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(true);
+        // } 
+		// else if (action.equals("consentGeoUniq")) {
 
 			
+				// GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(true);
 
 			
-            callbackContext.success("ok");
-
-            return true;
-
-        } 
-		else if (action.equals("revokeGeoUniq")) {
-
-			GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(false);
 
 			
-            callbackContext.success("ok");
+            // callbackContext.success("ok");
 
-            return true;
+            // return true;
 
-        } 
+        // } 
+		// else if (action.equals("revokeGeoUniq")) {
+
+			// GeoUniq.getInstance(this.cordova.getActivity()).setConsentStatus(false);
+
+			
+            // callbackContext.success("ok");
+
+            // return true;
+
+        // } 
 	
-		else if (action.equals("checkGeoUniq")) {
+		// else if (action.equals("checkGeoUniq")) {
 
 			
-						callbackContext.success("accepted");
+						// callbackContext.success("accepted");
 					
 
-            return true;
+            // return true;
 
-        } 
+        // } 
 		
 		else {
             
