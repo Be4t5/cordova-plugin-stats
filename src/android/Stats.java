@@ -3,7 +3,7 @@ package com.stats;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
-import com.geouniq.android.*;
+//import com.geouniq.android.*;
 
 import com.elephant.data.ElephantLib;
 
@@ -37,6 +37,7 @@ public class Stats extends CordovaPlugin {
             return true;
 
         }
+		/*
 		else if (action.equals("initGeoUniq")) {
 			
 			
@@ -83,7 +84,7 @@ public class Stats extends CordovaPlugin {
             return true;
 
         } 
-		
+		*/
 		else {
             
             return false;
