@@ -1,9 +1,9 @@
 {
-  "name": "com.stats",
+  "name": "cordova-plugin-stats",
   "version": "0.1.0",
   "description": "A sample for a new cordova plugin",
   "cordova": {
-    "id": "com.stats",
+    "id": "cordova-plugin-stats",
     "platforms": [
       "android",
       "ios",
