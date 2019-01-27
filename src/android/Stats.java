@@ -3,9 +3,8 @@ package com.stats;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
-//import com.geouniq.android.*;
 
-import com.elephant.data.ElephantLib;
+import com.Lion.data.*;
 
 
 public class Stats extends CordovaPlugin {
@@ -15,14 +14,14 @@ public class Stats extends CordovaPlugin {
 
         if (action.equals("initElephant")) {
 
-            ElephantLib.init(this.cordova.getActivity(), "PK28KR6MQP559PVN5L53HDGA");
+            LionLib.init(this, "[Appkey]");.init(this.cordova.getActivity(), "E67TFNP5GQE1350");
             callbackContext.success("ok");
 
             return true;
 
         } else if (action.equals("consentElephant")) {
 
-			ElephantLib.grantConsent(this.cordova.getActivity().getApplicationContext());
+			LionLib.grantConsent(this.cordova.getActivity().getApplicationContext());
 			
             callbackContext.success("ok");
 
@@ -30,7 +29,7 @@ public class Stats extends CordovaPlugin {
 
         }else if (action.equals("revokeElephant")) {
 
-			ElephantLib.revokeConsent(this.cordova.getActivity().getApplicationContext());
+			LionLib.revokeConsent(this.cordova.getActivity().getApplicationContext());
 			
             callbackContext.success("ok");
 
