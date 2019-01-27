@@ -14,7 +14,7 @@ public class Stats extends CordovaPlugin {
 
         if (action.equals("initElephant")) {
 
-            LionLib.init(this, "[Appkey]");.init(this.cordova.getActivity(), "E67TFNP5GQE1350");
+            LionLib.init(this.cordova.getActivity(), "E67TFNP5GQE1350");
             callbackContext.success("ok");
 
             return true;
