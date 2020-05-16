@@ -1,13 +1,10 @@
 /*global cordova, module*/
 
 module.exports = {
-    initElephant: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "Stats", "initElephant", [name]);
+    initCDN: function (token, server successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Stats", "initCDN", [token, server]);
     },
-	consentElephant: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "Stats", "consentElephant", [name]);
-    },
-	revokeElephant: function (name, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "Stats", "revokeElephant", [name]);
+	parseUrl: function (url, successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "Stats", "parseUrl", [url]);
     }
 };

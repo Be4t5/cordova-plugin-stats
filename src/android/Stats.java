@@ -4,7 +4,7 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import com.lion.data.*;
+import com.cdnbye.sdk.P2pEngine;
 
 
 public class Stats extends CordovaPlugin {
@@ -12,32 +12,31 @@ public class Stats extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
-        if (action.equals("initElephant")) {
+        if (action.equals("initCDN")) {
 
-            LionLib.init(this.cordova.getActivity(), "E67TFNP5GQE1350");
+			String token = data.getString(0);
+			String server = data.getString(0);
+			
+			P2pConfig config = new P2pConfig.Builder()
+			.wsSignalerAddr(server)        
+			.wifiOnly(true)                                  
+			.build();  
+
+			P2pEngine.initEngine(this.cordova.getActivity(), token, config);
             callbackContext.success("ok");
 
             return true;
 
-        } else if (action.equals("consentElephant")) {
+        } else if (action.equals("parseUrl")) {
 
-			LionLib.grantConsent(this.cordova.getActivity().getApplicationContext());
+			String url = data.getString(0);
 			
-            callbackContext.success("ok");
-
-            return true;
-
-        }else if (action.equals("revokeElephant")) {
-
-			LionLib.revokeConsent(this.cordova.getActivity().getApplicationContext());
-			
-            callbackContext.success("ok");
+            callbackContext.success(P2pEngine.getInstance().parseStreamUrl(url));
 
             return true;
 
         }
-		
-		
+
 		else {
             
             return false;
