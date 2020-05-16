@@ -4,7 +4,7 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import com.cdnbye.sdk.P2pEngine;
+import com.cdnbye.sdk.*;
 
 
 public class Stats extends CordovaPlugin {
