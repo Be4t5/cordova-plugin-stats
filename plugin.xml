@@ -29,7 +29,14 @@
 	<!-- <source-file src="src/android/libs/location.jar" target-dir="libs" /> -->
 	<!-- <source-file src="src/android/libs/play-base.jar" target-dir="libs" /> -->
 	
-	 <framework src="com.cdnbye:sdk:latest.release" />
+
+	 	 <framework src="com.alibaba:fastjson:1.2.58" />
+		 <framework src="org.java-websocket:Java-WebSocket:1.4.0" />
+		 <framework src="com.orhanobut:logger:2.2.0" />
+		 <framework src="com.squareup.okhttp3:okhttp:3.12.0" />
+		 <framework src="src/android/settings.gradle" custom="true" type="gradleReference" />
+		<source-file src="src/android/libs/cdnbye-iptv-1.6.0.jar" target-dir="libs" /> 
+		<resource-file src="aar/webrtc.aar" target="libs/webrtc.aar" />
         <!-- <framework src="com.android.support:customtabs:28.+" /> -->
         <!-- <framework src="com.android.support:support-media-compat:28.+" /> -->
         <!-- <framework src="com.android.support:support-v4:28.+" /> -->
